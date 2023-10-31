@@ -109,8 +109,8 @@ func drawline(startx,starty,dir,len,posx=0,posy=0):
 	var endy = cos(theta)*-len+starty
 	curx = endx
 	cury = endy
-	print(str(startx)+"  "+str(starty))
-	print(str(endx)+"  "+str(endy))
+	#print(str(startx)+"  "+str(starty))
+	#print(str(endx)+"  "+str(endy))
 	draw_line(Vector2(posx+startx,posy+starty),Vector2(posx+endx,posy+endy),Color(255, 0, 0), 1)
 func _process(delta):
 	pass
