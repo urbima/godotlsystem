@@ -48,6 +48,7 @@ var rules = {
 	  }
    }
 }
+#for other l-systems change tree below to any of the above rules
 var cursys = rules.tree
 var curstr = cursys.axiom
 var angle = 0 
@@ -57,7 +58,6 @@ func _draw():
 	for i in 5:
 		stepcurstr()
 		drawsystem()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func popstaterotate(angle):
 	var position = posstack.pop_back()
@@ -92,6 +92,7 @@ func drawsystem():
 func doaction(char,angle):
 	match char:
 		"1","0","a","b","f": 
+			#change 500,500 to set x and y position of the representation
 			drawline(curx, cury, direction, length, 500,500)
 		"[":
 			pushstaterotate(angle)
